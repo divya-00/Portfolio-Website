@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -185,18 +186,24 @@ nav ul li a:hover::after{
     flex-wrap: wrap;
     gap: 5rem;
     width:100%;
-    margin: 1rem;
+    margin:0.2rem;
 }
+.work-exp{
+    width: 100%;
 
-.row .exp-col-1,.row .exp-col-2{
-    width: 45%;
 }
-
-.exp-col-1 .title,.exp-col-2 .title{
+.work-exp .title{
     font-size: 2rem;
     margin: 0 0 1.5rem 2rem;
 }
-.exp-col-1 .exp-box,.exp-col-2 .exp-box{
+.work-exp .exp-box{
+    border-left: .1rem solid #ff0088;
+    padding-left: 1rem;
+}
+.row .exp-col-1,.row .exp-col-2{
+    width: 100%;
+}
+.row .exp-col-1,.row .exp-col-2 .exp-box{
     border-left: .1rem solid #ff0088;
     padding-left: 1rem;
 }
@@ -250,8 +257,40 @@ nav ul li a:hover::after{
     font-size: 20px;
     margin-bottom: 10px;
 }
+.exp-content .content {
+    position: relative;
+    padding: 1.5rem;
+    border: .1rem solid #ff0088;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
+    /* Make year & role align on the same line */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* prevents overlap on small screens */
+}
+
+.exp-content .content .year {
+    font-size: 16px;
+    color: #ff0088;
+    padding-bottom: 0;  /* remove extra gap */
+    margin-left: auto;  /* push to right */
+    margin-bottom: 10px;
+}
+
+.exp-content .content h3 {
+    font-size: 20px;
+    color: #ff0088;
+    margin-bottom: 10px; /* remove bottom spacing */
+    flex: 1;   /* allow role to take space */
+}
+
+
 .exp-content .content p{
     font-size: 16px;
+    line-height: 1.5rem;
     padding-top: .2rem;
 }
 /* ------project---- */
@@ -268,7 +307,7 @@ nav ul li a:hover::after{
     margin-top: 50px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 } 
-.pro-row .pro-col{
+/* .pro-row .pro-col{
     background-color: #262626;
     padding: 40px;
     font-size: 18px;
@@ -276,11 +315,35 @@ nav ul li a:hover::after{
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
     text-align: justify;
-}
+} */
+/* .pro-row .pro-col {
+    background-color: #262626;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    text-align: justify;
+
+    display: flex;              /* Make it a flex container */
+    /* flex-direction: column;     /* Stack items vertically */
+    /* justify-content: space-between; /* Push last element to bottom */
+/* } */ 
+
 .pro-row .pro-col i{
     font-size: 35px;
     margin-bottom:  30px;
 }
+.icon-row {
+    display: flex;
+    gap: 10px; /* spacing between icons */
+    margin-bottom: 20px;
+}
+
+.icon-row i {
+    font-size: 35px;
+}
+
 .pro-row .pro-col h2{
    font-size: 30px;
    font-weight: 500;
@@ -298,6 +361,52 @@ nav ul li a:hover::after{
     background: #ff0088;
     transform: translateY(-10px);
 }
+
+/* .links-row {
+    display: flex;
+    justify-content: space-between; /* pushes links apart */
+    /* margin-top: 20px;
+}
+
+.links-row a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}  */
+
+  /* Make project card a flexbox */
+.pro-row .pro-col {
+    background-color: #262626;
+    padding: 40px;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    text-align: justify;
+
+    display: flex;              /* flex container */
+    flex-direction: column;     /* stack content vertically */
+}
+
+/* Links row at bottom */
+.links-row {
+    margin-top: auto;           /* pushes it to the bottom */
+    display: flex;
+    justify-content: space-between; /* one left, one right */
+    align-items: center;
+}
+
+/* Small icons for links */
+.links-row a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+.links-row a i.link-icon {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
 
 
 /* ---Skills--- */
@@ -520,3 +629,5 @@ nav .fas{
     }
     
 }
+
+
